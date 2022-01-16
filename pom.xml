@@ -4,6 +4,28 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <profiles>
+    <profile>
+        <id>MavenRepository</id>
+        <repositories>
+            <repository>
+                <id>central</id>
+                <url>https://repo1.maven.org/maven2</url>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+            </repository>
+        </repositories>
+    </profile>
+</profiles>
+
+<!--<activeProfiles>-->
+<!--<activeProfile>MavenRepository</activeProfile>-->
+<!--</activeProfiles>-->
+
 <!--    <repository>-->
 <!--        <id>maven2</id>-->
 <!--        <url>http://repo1.maven.org/maven2</url>-->
@@ -53,6 +75,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 <!--    <version>$revision</version>-->
+<!--    <version>1.0</version>-->
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
