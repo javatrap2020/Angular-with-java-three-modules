@@ -59,7 +59,7 @@
         <version>2.6.2</version>
         <relativePath/>
     </parent>
-    
+
     <modules>
         <module>backend</module>
         <module>ui</module>
